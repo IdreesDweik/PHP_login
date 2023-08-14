@@ -35,5 +35,5 @@ function is_email_registered(object $pdo, string $email) {
 }
 
 function create_user(object $pdo, string $firstname, string $middlename, string $lastname, string $familyname, string $email, string $pwd, string $confirmpwd, int $phonenumber, string $dateofbirth) {
-    set_user($pdo, $firstname, $middlename, $lastname, $familyname, $email, $pwd, $confirmpwd, $phonenumber, $dateofbirth)
+    set_user($pdo, $firstname, $middlename, $lastname, $familyname, $email, $pwd, $confirmpwd, $phonenumber, $dateofbirth);
 }

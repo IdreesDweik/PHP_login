@@ -2,8 +2,12 @@
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
+    print_r($_POST);
+    echo "hey there";
     $firstname = $_POST["firstname"];
+    $middlename = $_POST["middlename"];
     $lastname = $_POST["lastname"];
+    $familyname = $_POST["familyname"];
     $email = $_POST["email"];
     $pwd = $_POST["pwd"];
     $confirmpwd = $_POST["confirmpwd"];

@@ -3,12 +3,14 @@
 }
 
 .wellcome {
-    position: sticky;
+    margin: 0 auto;
+    position: static;
 }
 
 .login-form {
     display: none;
     margin: 0 auto;
+    position: relative;
     padding: 2%;
     width: 30%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -17,6 +19,7 @@
 .signup-form {
     display: none;
     margin: 0 auto;
+    position: relative;
     padding: 2%;
     width: 30%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
