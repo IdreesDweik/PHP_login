@@ -13,4 +13,3 @@ signup.onclick = function () {
     signUpForm.classList.toggle("show")
     loginForm.classList.remove("show")
 }
-

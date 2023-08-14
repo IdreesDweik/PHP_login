@@ -1,3 +1,8 @@
+<?php
+require_once 'session.php';
+require_once 'signup_view.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +27,7 @@
 <body>
 
     <div class="login-form">
-        <form>
+        <form action="login.php" method="post">
             <div class="row mb-3">
                 <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
                 <div class="col-sm-10">
@@ -40,34 +45,42 @@
     </div>
 
     <div class="signup-form">
-        <form class="row g-3">
+        <form class="row g-3" action="signup.php" method="post">
             <div class="col-6">
-                <label for="inputFirstName" class="form-label">First name</label>
-                <input type="text" class="form-control" id="inputFirstName" placeholder="Name">
+                <label for="firstname" class="form-label">First name</label>
+                <input type="text" class="form-control" id="firstname" placeholder="Name">
             </div>
             <div class="col-6">
-                <label for="inputLastName" class="form-label">Last name</label>
-                <input type="text" class="form-control" id="inputLastName" placeholder="Name">
+                <label for="middlename" class="form-label">Middle name</label>
+                <input type="text" class="form-control" id="middlename" placeholder="Name">
+            </div>
+            <div class="col-6">
+                <label for="lastname" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="lastname" placeholder="Name">
+            </div>
+            <div class="col-6">
+                <label for="familyname" class="form-label">Famil name</label>
+                <input type="text" class="form-control" id="familyname" placeholder="Name">
             </div>
             <div class="col-md-12">
-                <label for="inputEmail" class="form-label">Email</label>
-                <input type="email" class="form-control" id="inputEmail" placeholder="Example@example.com">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Example@example.com">
             </div>
             <div class="col-md-6">
-                <label for="inputPassword4" class="form-label">Password</label>
-                <input type="password" class="form-control" id="inputPassword4">
+                <label for="pwd" class="form-label">Password</label>
+                <input type="password" class="form-control" id="pwd">
             </div>
             <div class="col-md-6">
-                <label for="confirmPassword" class="form-label">Confirm password</label>
-                <input type="password" class="form-control" id="confirmPassword">
+                <label for="confirmpwd" class="form-label">Confirm password</label>
+                <input type="password" class="form-control" id="confirmpwd">
             </div>
             <div class="col-12">
-                <label for="inputPhoneNumber" class="form-label">Phone number</label>
-                <input type="" class="form-control" id="inputPhoneNumber" placeholder="009627....">
+                <label for="phonenumber" class="form-label">Phone number</label>
+                <input type="number" class="form-control" id="phonenumber" placeholder="009627....">
             </div>
             <div class="col-md-6">
-                <label for="inputCity" class="form-label">Date of birth</label>
-                <input type="date" class="form-control" id="inputCity">
+                <label for="dateofbirth" class="form-label">Date of birth</label>
+                <input type="date" class="form-control" id="dateofbirth">
             </div>
             <div class="col-12">
                 <button type="submit" class="btn btn-primary">Sign in</button>
@@ -86,6 +99,10 @@
             <button type="button" class="btn btn-secondary btn-lg" id="signup-button">Sign UP</button>
         </div>
     </div>
+
+    <?php
+        check_signup_errors();
+    ?>
 
     <script src="login.js"></script>
 </body>
